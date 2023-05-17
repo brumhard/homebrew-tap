@@ -5,21 +5,21 @@
 class Masklint < Formula
   desc "Lint your mask targets."
   homepage "https://github.com/brumhard/masklint"
-  version "0.1.0"
+  version "0.2.0"
   license "MIT"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/brumhard/masklint/releases/download/v0.1.0/masklint_darwin_arm64.tar.gz"
-      sha256 "48b1eb462571441d9a53aa1ef0a42b076cb15f652797acbf94389225c6d4821c"
+    if Hardware::CPU.intel?
+      url "https://github.com/brumhard/masklint/releases/download/v0.2.0/masklint_darwin_amd64.tar.gz"
+      sha256 "8778d62cd45fa3e752831b066fe3ae5885e3f57f38be6a5c1b3297729fe31cf4"
 
       def install
         bin.install "masklint"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/brumhard/masklint/releases/download/v0.1.0/masklint_darwin_amd64.tar.gz"
-      sha256 "4d463755d226fd5c3c8be67c342258755a849724c92c238036f27b54e3ed0301"
+    if Hardware::CPU.arm?
+      url "https://github.com/brumhard/masklint/releases/download/v0.2.0/masklint_darwin_arm64.tar.gz"
+      sha256 "e5d3e4ec21944aa775b474d73ae445839ebfed5bf0cba723813d3f23fcb4b9da"
 
       def install
         bin.install "masklint"
@@ -29,16 +29,16 @@ class Masklint < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/brumhard/masklint/releases/download/v0.1.0/masklint_linux_amd64.tar.gz"
-      sha256 "3cb4a43eaf7c0e4af36be1c0de69931e72ad75483600b9fce09ebf7fcccf664d"
+      url "https://github.com/brumhard/masklint/releases/download/v0.2.0/masklint_linux_amd64.tar.gz"
+      sha256 "5ec96aa7a2120d5bdf69c1d2208eacde073516e60187ad2b62b018844a15003b"
 
       def install
         bin.install "masklint"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/brumhard/masklint/releases/download/v0.1.0/masklint_linux_arm64.tar.gz"
-      sha256 "dd6612c5bef431090d6e071139c11028aab02ae0814ee154aff61d1bd6022635"
+      url "https://github.com/brumhard/masklint/releases/download/v0.2.0/masklint_linux_arm64.tar.gz"
+      sha256 "fb3ea7b5d49a7779ba9f5a55bb7dae421f3beb579145cd65ff2ef45d4a80b111"
 
       def install
         bin.install "masklint"
