@@ -5,21 +5,21 @@
 class Masklint < Formula
   desc "Lint your mask targets."
   homepage "https://github.com/brumhard/masklint"
-  version "0.2.0"
+  version "0.2.1"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/brumhard/masklint/releases/download/v0.2.0/masklint_darwin_amd64.tar.gz"
-      sha256 "8778d62cd45fa3e752831b066fe3ae5885e3f57f38be6a5c1b3297729fe31cf4"
+      url "https://github.com/brumhard/masklint/releases/download/v0.2.1/masklint_darwin_amd64.tar.gz"
+      sha256 "dbc81c97ac97b62f122a43269116503c61f19fe1c485adfde508d8999db19c41"
 
       def install
         bin.install "masklint"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/brumhard/masklint/releases/download/v0.2.0/masklint_darwin_arm64.tar.gz"
-      sha256 "e5d3e4ec21944aa775b474d73ae445839ebfed5bf0cba723813d3f23fcb4b9da"
+      url "https://github.com/brumhard/masklint/releases/download/v0.2.1/masklint_darwin_arm64.tar.gz"
+      sha256 "dfcd67868721d8c92ea219cc1b98a62c22d405d7f07bf3f51e098e6953225ece"
 
       def install
         bin.install "masklint"
@@ -29,16 +29,16 @@ class Masklint < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/brumhard/masklint/releases/download/v0.2.0/masklint_linux_amd64.tar.gz"
-      sha256 "5ec96aa7a2120d5bdf69c1d2208eacde073516e60187ad2b62b018844a15003b"
+      url "https://github.com/brumhard/masklint/releases/download/v0.2.1/masklint_linux_amd64.tar.gz"
+      sha256 "7c90a6f31c2a3e1797337d07f5101bbf384b4ebc23cde9711c3ab42e77f2040e"
 
       def install
         bin.install "masklint"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/brumhard/masklint/releases/download/v0.2.0/masklint_linux_arm64.tar.gz"
-      sha256 "fb3ea7b5d49a7779ba9f5a55bb7dae421f3beb579145cd65ff2ef45d4a80b111"
+      url "https://github.com/brumhard/masklint/releases/download/v0.2.1/masklint_linux_arm64.tar.gz"
+      sha256 "6a008382cfda80bbfecdaac9e2bceaaa9dd26fab7eb3b3b6045f5ec52c73b7b6"
 
       def install
         bin.install "masklint"
