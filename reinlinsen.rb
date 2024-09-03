@@ -5,21 +5,21 @@
 class Reinlinsen < Formula
   desc "Inspect and dump OCI images"
   homepage "https://github.com/brumhard/reinlinsen"
-  version "0.3.3"
+  version "0.3.7"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/brumhard/reinlinsen/releases/download/v0.3.3/reinlinsen_darwin_amd64.tar.gz"
-      sha256 "3e8158432f477c746f9da51425f6775f6681c3967977370e1a36ff9fa555af9e"
+      url "https://github.com/brumhard/reinlinsen/releases/download/v0.3.7/reinlinsen_darwin_amd64.tar.gz"
+      sha256 "2da31e94058a518d4c9bbf1a13e69452b86ad147651436015b1faff5dd071ffa"
 
       def install
         bin.install "rl"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/brumhard/reinlinsen/releases/download/v0.3.3/reinlinsen_darwin_arm64.tar.gz"
-      sha256 "243ad1a2d2ce97cc2e1f2b8f94ea7e8b4531768e197cf98cdd923deac5fd4105"
+      url "https://github.com/brumhard/reinlinsen/releases/download/v0.3.7/reinlinsen_darwin_arm64.tar.gz"
+      sha256 "44060ed01a7a694ee2424430630a83f3ac3479ec8d35dc87c10f356358d44427"
 
       def install
         bin.install "rl"
@@ -28,17 +28,17 @@ class Reinlinsen < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/brumhard/reinlinsen/releases/download/v0.3.3/reinlinsen_linux_arm64.tar.gz"
-      sha256 "31d6aa68ccd680e865e5673b5fb2e1887a5a2fb85a9354a6f60ef92b4f1aa80b"
+    if Hardware::CPU.intel?
+      url "https://github.com/brumhard/reinlinsen/releases/download/v0.3.7/reinlinsen_linux_amd64.tar.gz"
+      sha256 "3ee10c6d55e9e26ccd7db51eaee6cf0016c02f15ad4817e9246c1c6df5dfed51"
 
       def install
         bin.install "rl"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/brumhard/reinlinsen/releases/download/v0.3.3/reinlinsen_linux_amd64.tar.gz"
-      sha256 "3f92df299280500e3d98cf5e382182466cc6700501bbfb4dd6f70e58e70949b4"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/brumhard/reinlinsen/releases/download/v0.3.7/reinlinsen_linux_arm64.tar.gz"
+      sha256 "3730abe3a198d65e1dcb687d3cacf6dcb31b6d4630dd36f41d6fd08b95390760"
 
       def install
         bin.install "rl"
