@@ -5,12 +5,12 @@
 class Krewfile < Formula
   desc "Declarative krew plugin management"
   homepage "https://github.com/brumhard/krewfile"
-  version "0.6.2"
+  version "0.6.3"
   license "MIT"
 
   on_macos do
-    url "https://github.com/brumhard/krewfile/releases/download/v0.6.2/krewfile_Darwin_all.tar.gz"
-    sha256 "d72a112987f9ca23c9276e4ac0f8e8a31d2e03c75cdb02e7f8e5e284b0044bd4"
+    url "https://github.com/brumhard/krewfile/releases/download/v0.6.3/krewfile_Darwin_all.tar.gz"
+    sha256 "5129be94a8d2284e3c7c5bd5d7237547bf2b8bf7ded9b8445a787c0910398493"
 
     def install
       bin.install "krewfile"
@@ -20,8 +20,8 @@ class Krewfile < Formula
   on_linux do
     if Hardware::CPU.intel?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/brumhard/krewfile/releases/download/v0.6.2/krewfile_Linux_x86_64.tar.gz"
-        sha256 "75b6e5f242bf9b71618f77b97bed20127db3b0d16f7f7750ea580e47c09c1247"
+        url "https://github.com/brumhard/krewfile/releases/download/v0.6.3/krewfile_Linux_x86_64.tar.gz"
+        sha256 "48f8854ef4c9ffea9d5311c5adb4085ae0c7e782da8eeecd5a17cd71b493b6ac"
 
         def install
           bin.install "krewfile"
@@ -30,8 +30,8 @@ class Krewfile < Formula
     end
     if Hardware::CPU.arm?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/brumhard/krewfile/releases/download/v0.6.2/krewfile_Linux_arm64.tar.gz"
-        sha256 "bd4fea5c0c122c67b2c140620430797d0354bfa56421a0f026d919561d04bdee"
+        url "https://github.com/brumhard/krewfile/releases/download/v0.6.3/krewfile_Linux_arm64.tar.gz"
+        sha256 "c20341ed668d50de6764a0dc3945afe2ba4625e88f49656874576b3b0b116f64"
 
         def install
           bin.install "krewfile"
